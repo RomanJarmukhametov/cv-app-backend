@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_components_menu_items",
+  "info": {
+    "displayName": "Menu Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "about",
+        "education",
+        "experience",
+        "skills",
+        "portfolio",
+        "contacts",
+        "feedback"
+      ]
+    },
+    "sectionId": {
+      "type": "enumeration",
+      "enum": [
+        "about",
+        "education",
+        "experience",
+        "skills",
+        "portfolio",
+        "contacts",
+        "feedback"
+      ]
+    },
+    "item": {
+      "type": "enumeration",
+      "enum": [
+        "About me",
+        "Education",
+        "Experience",
+        "Skills",
+        "Portfolio",
+        "Contacts",
+        "Feedback"
+      ]
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
