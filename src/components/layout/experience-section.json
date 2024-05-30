@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_experience_sections",
+  "info": {
+    "displayName": "Experience Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sectionId": {
+      "type": "string"
+    },
+    "workExperience": {
+      "displayName": "Work Experience",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.work-experience"
+    }
+  }
+}

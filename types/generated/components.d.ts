@@ -67,6 +67,19 @@ export interface ComponentsMenuItem extends Schema.Component {
   };
 }
 
+export interface ComponentsWorkExperience extends Schema.Component {
+  collectionName: 'components_components_work_experiences';
+  info: {
+    displayName: 'Work Experience';
+  };
+  attributes: {
+    company: Attribute.String;
+    period: Attribute.String;
+    position: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface LayoutAboutSection extends Schema.Component {
   collectionName: 'components_layout_about_sections';
   info: {
@@ -77,6 +90,19 @@ export interface LayoutAboutSection extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     sectionId: Attribute.String;
+  };
+}
+
+export interface LayoutExperienceSection extends Schema.Component {
+  collectionName: 'components_layout_experience_sections';
+  info: {
+    displayName: 'Experience Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    sectionId: Attribute.String;
+    workExperience: Attribute.Component<'components.work-experience', true>;
   };
 }
 
@@ -102,7 +128,9 @@ declare module '@strapi/types' {
       'components.avatar': ComponentsAvatar;
       'components.link': ComponentsLink;
       'components.menu-item': ComponentsMenuItem;
+      'components.work-experience': ComponentsWorkExperience;
       'layout.about-section': LayoutAboutSection;
+      'layout.experience-section': LayoutExperienceSection;
       'layout.hero-section': LayoutHeroSection;
     }
   }
