@@ -22,7 +22,9 @@
       "type": "dynamiczone",
       "components": [
         "layout.about-section",
-        "layout.experience-section"
+        "layout.experience-section",
+        "layout.education-section",
+        "layout.skills-section"
       ]
     }
   }

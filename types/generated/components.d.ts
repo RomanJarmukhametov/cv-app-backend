@@ -11,6 +11,18 @@ export interface ComponentsAvatar extends Schema.Component {
   };
 }
 
+export interface ComponentsEducationInfo extends Schema.Component {
+  collectionName: 'components_components_education_infos';
+  info: {
+    displayName: 'Education Info';
+  };
+  attributes: {
+    year: Attribute.String;
+    degree: Attribute.Text;
+    institution: Attribute.Text;
+  };
+}
+
 export interface ComponentsLink extends Schema.Component {
   collectionName: 'components_components_links';
   info: {
@@ -67,6 +79,17 @@ export interface ComponentsMenuItem extends Schema.Component {
   };
 }
 
+export interface ComponentsSkillDegree extends Schema.Component {
+  collectionName: 'components_components_skill_degrees';
+  info: {
+    displayName: 'Skill Degree';
+  };
+  attributes: {
+    name: Attribute.String;
+    degree: Attribute.Integer;
+  };
+}
+
 export interface ComponentsWorkExperience extends Schema.Component {
   collectionName: 'components_components_work_experiences';
   info: {
@@ -90,6 +113,19 @@ export interface LayoutAboutSection extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     sectionId: Attribute.String;
+  };
+}
+
+export interface LayoutEducationSection extends Schema.Component {
+  collectionName: 'components_layout_education_sections';
+  info: {
+    displayName: 'Education Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    sectionId: Attribute.String;
+    educationInfo: Attribute.Component<'components.education-info', true>;
   };
 }
 
@@ -122,16 +158,33 @@ export interface LayoutHeroSection extends Schema.Component {
   };
 }
 
+export interface LayoutSkillsSection extends Schema.Component {
+  collectionName: 'components_layout_skills_sections';
+  info: {
+    displayName: 'Skills Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    sectionId: Attribute.String;
+    skillDegree: Attribute.Component<'components.skill-degree', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'components.avatar': ComponentsAvatar;
+      'components.education-info': ComponentsEducationInfo;
       'components.link': ComponentsLink;
       'components.menu-item': ComponentsMenuItem;
+      'components.skill-degree': ComponentsSkillDegree;
       'components.work-experience': ComponentsWorkExperience;
       'layout.about-section': LayoutAboutSection;
+      'layout.education-section': LayoutEducationSection;
       'layout.experience-section': LayoutExperienceSection;
       'layout.hero-section': LayoutHeroSection;
+      'layout.skills-section': LayoutSkillsSection;
     }
   }
 }

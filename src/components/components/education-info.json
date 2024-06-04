@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_components_education_infos",
+  "info": {
+    "displayName": "Education Info"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "text"
+    },
+    "institution": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_skills_sections",
+  "info": {
+    "displayName": "Skills Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sectionId": {
+      "type": "string"
+    },
+    "skillDegree": {
+      "displayName": "Skill Degree",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.skill-degree"
+    }
+  }
+}

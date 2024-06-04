@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_components_skill_degrees",
+  "info": {
+    "displayName": "Skill Degree"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "integer"
+    }
+  }
+}

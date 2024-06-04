@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_education_sections",
+  "info": {
+    "displayName": "Education Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sectionId": {
+      "type": "string"
+    },
+    "educationInfo": {
+      "displayName": "Education Info",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.education-info"
+    }
+  }
+}

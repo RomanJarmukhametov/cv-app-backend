@@ -836,7 +836,12 @@ export interface ApiResumePageResumePage extends Schema.SingleType {
     titleSeo: Attribute.String;
     descriptionSeo: Attribute.Text;
     blocks: Attribute.DynamicZone<
-      ['layout.about-section', 'layout.experience-section']
+      [
+        'layout.about-section',
+        'layout.experience-section',
+        'layout.education-section',
+        'layout.skills-section'
+      ]
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
